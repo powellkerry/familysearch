@@ -1,0 +1,1 @@
+A simple object array sorter which enables you to sort by many fields and in either direction per field. The sort functionality is contained in sort.js with appropriate documentation. All other files are for example purposes.
