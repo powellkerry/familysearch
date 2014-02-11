@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="sort">
+<head>
+    <title></title>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="sort.js"></script>
+    <script type="text/javascript" src="SortController.js"></script>
+</head>
+<body ng-controller="SortController">
+    <label>Sort By:</label>
+    <input type="checkbox" name="name" id="name" ng-model="name" ng-value="name"><label for="name">Name</label>
+    <input type="checkbox" name="familyName" id="familyName" ng-model="familyName" ng-value="familyName"><label for="familyName">Family Name</label>
+    <input type="checkbox" name="birthDayNumber" id="birthDayNumber" ng-model="birthDayNumber" ng-value="birthDayNumber"><label for="birthDayNumber">Birth Day Number</label>
+    <input type="checkbox" name="birthCountry" id="birthCountry" ng-model="birthCountry" ng-value="birthCountry"><label for="birthCountry">Birth Country</label>
+    <button ng-click="sort()">Sort</button>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Family Name</th>
+            <th>Birth Day Number</th>
+            <th>Birth Country</th>
+        </tr>
+        <tr ng-repeat="person in people">
+            <td>{{person.name}}</td><td>{{person.familyName}}</td><td>{{person.birthDayNumber}}</td><td>{{person.birthCountry}}</td>
+        </tr>
+    </table>
+</body>
+</html>
